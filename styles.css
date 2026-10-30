@@ -221,6 +221,14 @@ h1 {
   letter-spacing: -0.045em;
   font-weight: 760;
 }
+.tagline {
+  margin: 0.85rem 0 0;
+  color: var(--accent);
+  font-size: clamp(1.2rem, 2.6vw, 1.7rem);
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  line-height: 1.45;
+}
 .lede {
   margin: 1rem 0 0;
   color: var(--muted);

@@ -145,7 +145,7 @@
     document.getElementById("q-fee").textContent = formatWei(fee) + " BNB";
     document.getElementById("q-total").textContent = formatWei(total) + " BNB";
     var recv = document.getElementById("q-recv");
-    if (serial <= OPEN_AT) recv.textContent = group(shares * 100000) + " BIBIAI";
+    if (serial <= OPEN_AT) recv.textContent = group(shares * 100000) + " HALO";
     else recv.textContent = "Pool price after open";
     highlight(priced);
   }
