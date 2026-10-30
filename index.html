@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HALO · 每一份，都给池子加一圈。</title>
+  <title>HALO · Every share adds a ring to the pool.</title>
   <meta name="description" content="Official share-mint page for HALO on GANG kind 3. Quote is BNB. An Agent ID is required. Minting continues after the pool opens. Mainnet is not live.">
   <meta name="theme-color" content="#07110d">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%2307110d' width='32' height='32'/%3E%3Crect fill='%23d6ff4a' x='4' y='4' width='10' height='10'/%3E%3Crect fill='%23d6ff4a' x='18' y='18' width='10' height='10'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top">
-  <a class="skip" href="#mint">Skip to mint</a>
+  <a class="skip" href="#mint" data-i18n="skip">Skip to mint</a>
   <div class="rail rail-left" aria-hidden="true">
     <span class="rail-dots"><span></span><span></span><span></span></span>
-    <span class="rail-text">KIND 3 · BNB QUOTE</span>
+    <span class="rail-text" data-i18n="railLeft">KIND 3 · BNB QUOTE</span>
     <span class="rail-dots"><span></span><span></span><span></span></span>
   </div>
   <div class="rail rail-right" aria-hidden="true">
     <span class="rail-dots"><span></span><span></span><span></span></span>
-    <span class="rail-text">MINT CONTINUES AFTER OPEN</span>
+    <span class="rail-text" data-i18n="railRight">MINT CONTINUES AFTER OPEN</span>
     <span class="rail-dots"><span></span><span></span><span></span></span>
   </div>
 
@@ -27,27 +27,32 @@
       <img class="logo" src="halo-logo.jpg" width="40" height="40" alt="">
       <span>
         <span class="brand-name">GANG</span>
-        <span class="brand-sub">KIND 3 SHARE MINT</span>
+        <span class="brand-sub" data-i18n="brandSub">KIND 3 SHARE MINT</span>
       </span>
     </a>
-    <nav class="nav" aria-label="Page">
-      <a href="#mint">Mint</a>
-      <a href="#how">How to mint</a>
-      <a href="#agent">Agent ID</a>
-      <a href="#after">After open</a>
-      <a href="#tiers">Tiers</a>
-      <a href="#stats">Stats</a>
+    <nav class="nav" aria-label="Page" data-i18n-aria="navLabel">
+      <a href="#mint" data-i18n="navMint">Mint</a>
+      <a href="#how" data-i18n="navHow">How to mint</a>
+      <a href="#agent" data-i18n="navAgent">Agent ID</a>
+      <a href="#after" data-i18n="navAfter">After open</a>
+      <a href="#tiers" data-i18n="navTiers">Tiers</a>
+      <a href="#stats" data-i18n="navStats">Stats</a>
     </nav>
     <div class="top-meta">
+      <div class="lang" role="group" aria-label="Language" data-i18n-aria="langLabel">
+        <button type="button" id="lang-zh" data-set-lang="zh" aria-pressed="false">中文</button>
+        <span class="lang-slash" aria-hidden="true">/</span>
+        <button type="button" id="lang-en" data-set-lang="en" aria-pressed="true">EN</button>
+      </div>
       <div class="top-stat">
-        <span>Minted</span>
+        <span data-i18n="mintedLabel">Minted</span>
         <strong>—</strong>
       </div>
       <div class="top-stat">
-        <span>Share 1–10,000</span>
+        <span data-i18n="shareRange">Share 1–10,000</span>
         <strong>0.002 BNB</strong>
       </div>
-      <span class="pill warn"><span class="dot" aria-hidden="true"></span>Mainnet not live</span>
+      <span class="pill warn"><span class="dot" aria-hidden="true"></span><span data-i18n="mainnetOff">Mainnet not live</span></span>
     </div>
   </header>
 
@@ -56,102 +61,102 @@
       <div class="hero-bg" aria-hidden="true"></div>
       <div class="wrap">
       <div class="hero-intro">
-        <p class="kicker">BNB Smart Chain · Agent ID · Kind 3</p>
+        <p class="kicker" data-i18n="kicker">BNB Smart Chain · Agent ID · Kind 3</p>
         <h1 id="hero-title">HALO</h1>
-        <p class="tagline">每一份，都给池子加一圈。</p>
-        <p class="lede">A GANG kind-3 share mint. You pay BNB, the wallet must hold a <strong>.ai</strong> Agent ID, and minting keeps going after the PancakeSwap pool opens. Holder rewards are recorded in SharedDividendVault.</p>
+        <p class="tagline" data-i18n="tagline">Every share adds a ring to the pool.</p>
+        <p class="lede" data-i18n-html="lede">A GANG kind-3 share mint. You pay BNB, the wallet must hold a <strong>.ai</strong> Agent ID, and minting keeps going after the PancakeSwap pool opens. Holder rewards are recorded in SharedDividendVault.</p>
       </div>
 
       <div class="hero-grid">
         <form class="card mint-card" id="quote-form" action="#mint">
           <div class="card-head">
-            <p class="pass-title">HALO · SHARE PASS</p>
-            <span class="pill warn">Mainnet not live</span>
+            <p class="pass-title" data-i18n="passTitle">HALO · SHARE PASS</p>
+            <span class="pill warn" data-i18n="mainnetOff">Mainnet not live</span>
           </div>
           <div class="identity">
             <div class="id-box">
-              <span class="label">Agent ID</span>
-              <strong>Required</strong>
-              <p>The pad reads the gate on-chain. No Agent ID, no mint.</p>
+              <span class="label" data-i18n="agentLabel">Agent ID</span>
+              <strong data-i18n="agentRequired">Required</strong>
+              <p data-i18n="agentBody">The pad reads the gate on-chain. No Agent ID, no mint.</p>
             </div>
             <div class="id-box">
-              <span class="label">Wallet</span>
-              <strong>Not connected</strong>
-              <p>This page only quotes the schedule. It sends nothing.</p>
+              <span class="label" data-i18n="walletLabel">Wallet</span>
+              <strong data-i18n="walletState">Not connected</strong>
+              <p data-i18n="walletBody">This page only quotes the schedule. It sends nothing.</p>
             </div>
           </div>
 
           <div class="fields">
             <label class="field">
-              <span>Shares this transaction (1–10)</span>
+              <span data-i18n="sharesLabel">Shares this transaction (1–10)</span>
               <span class="stepper">
-                <button type="button" id="shares-dec" aria-label="Fewer shares">−</button>
+                <button type="button" id="shares-dec" aria-label="Fewer shares" data-i18n-aria="fewer">−</button>
                 <input id="shares" name="shares" type="number" min="1" max="10" step="1" value="1" inputmode="numeric" aria-describedby="shares-hint">
-                <button type="button" id="shares-inc" aria-label="More shares">+</button>
+                <button type="button" id="shares-inc" aria-label="More shares" data-i18n-aria="more">+</button>
               </span>
             </label>
             <label class="field">
-              <span>Preview: serial of the last share in the batch</span>
+              <span data-i18n="serialLabel">Preview: serial of the last share in the batch</span>
               <input id="serial" name="serial" type="number" min="1" step="1" value="1" inputmode="numeric">
             </label>
             <label class="field">
-              <span>Referrer (optional, not sent)</span>
-              <input id="referrer" name="referrer" type="text" placeholder="Agent ID or address" autocomplete="off" spellcheck="false">
+              <span data-i18n="referrerLabel">Referrer (optional, not sent)</span>
+              <input id="referrer" name="referrer" type="text" placeholder="Agent ID or address" data-i18n-placeholder="referrerPh" autocomplete="off" spellcheck="false">
             </label>
             <p class="hint" id="shares-hint">Before the pool opens, every share is 0.002 BNB. A batch is priced at its last share’s tier. A 1% platform fee sits on top.</p>
             <p class="hint error" id="quote-error" hidden></p>
           </div>
 
           <dl class="quote" id="quote" aria-live="polite">
-            <div><dt>Tier</dt><dd id="q-tier">1 · shares 1–10,000</dd></div>
-            <div><dt>Unit price</dt><dd id="q-unit">0.002 BNB</dd></div>
-            <div><dt>Subtotal</dt><dd id="q-sub">0.002 BNB</dd></div>
-            <div><dt>Platform fee 1%</dt><dd id="q-fee">0.00002 BNB</dd></div>
-            <div class="total"><dt>You pay</dt><dd id="q-total">0.00202 BNB</dd></div>
-            <div><dt>You receive</dt><dd id="q-recv">100,000 HALO</dd></div>
+            <div><dt data-i18n="tierDt">Tier</dt><dd id="q-tier">1 · shares 1–10,000</dd></div>
+            <div><dt data-i18n="unitDt">Unit price</dt><dd id="q-unit">0.002 BNB</dd></div>
+            <div><dt data-i18n="subDt">Subtotal</dt><dd id="q-sub">0.002 BNB</dd></div>
+            <div><dt data-i18n="feeDt">Platform fee 1%</dt><dd id="q-fee">0.00002 BNB</dd></div>
+            <div class="total"><dt data-i18n="payDt">You pay</dt><dd id="q-total">0.00202 BNB</dd></div>
+            <div><dt data-i18n="recvDt">You receive</dt><dd id="q-recv">100,000 HALO</dd></div>
           </dl>
 
-          <button class="mint-btn" type="button" disabled>Mint unavailable — mainnet is not live</button>
-          <p class="fine">No HALO token address is published here. A plain BNB transfer does not mint. On testnet, minting goes through the kind-3 pad below. Mainnet has no kind-3 pad yet.</p>
+          <button class="mint-btn" type="button" disabled data-i18n="mintBtn">Mint unavailable — mainnet is not live</button>
+          <p class="fine" data-i18n="fine">No HALO token address is published here. A plain BNB transfer does not mint. On testnet, minting goes through the kind-3 pad below. Mainnet has no kind-3 pad yet.</p>
           <div class="addr">
             <div>
-              <span class="label">Testnet pad · chain 97</span>
+              <span class="label" data-i18n="padLabel">Testnet pad · chain 97</span>
               <code id="pad">0xD6482850aCAC74BA889804931Fc797294777951c</code>
             </div>
-            <button class="copy" type="button" data-copy="0xD6482850aCAC74BA889804931Fc797294777951c">Copy</button>
+            <button class="copy" type="button" data-copy="0xD6482850aCAC74BA889804931Fc797294777951c" data-i18n="copy">Copy</button>
           </div>
         </form>
 
         <div class="side">
           <aside class="card schedule">
-            <span class="label">Schedule</span>
-            <h2>Opens, then keeps minting</h2>
+            <span class="label" data-i18n="scheduleLabel">Schedule</span>
+            <h2 data-i18n="scheduleTitle">Opens, then keeps minting</h2>
             <div class="metrics">
-              <div><span class="label">Pre-open price</span><strong>0.002 BNB</strong></div>
-              <div><span class="label">Tokens / share</span><strong>100,000</strong></div>
-              <div><span class="label">Pool opens</span><strong>Share 10,000</strong></div>
-              <div><span class="label">After that</span><strong>Mint continues</strong></div>
+              <div><span class="label" data-i18n="preOpen">Pre-open price</span><strong>0.002 BNB</strong></div>
+              <div><span class="label" data-i18n="tokensPer">Tokens / share</span><strong>100,000</strong></div>
+              <div><span class="label" data-i18n="poolOpens">Pool opens</span><strong data-i18n="poolOpensVal">Share 10,000</strong></div>
+              <div><span class="label" data-i18n="afterThat">After that</span><strong data-i18n="afterVal">Mint continues</strong></div>
             </div>
-            <p>Share 10,000 opens a WBNB pair in the same transaction: 20 BNB and 1,000,000,000 tokens, LP minted to the dead address. The price then walks 353 tiers and stays at 0.01614 BNB from share 4,420,001 on. It does not stop at share 4,440,000.</p>
+            <p data-i18n="scheduleBody">Share 10,000 opens a WBNB pair in the same transaction: 20 BNB and 1,000,000,000 tokens, LP minted to the dead address. The price then walks 353 tiers and stays at 0.01614 BNB from share 4,420,001 on. It does not stop at share 4,440,000.</p>
           </aside>
 
           <aside class="card board" aria-labelledby="board-title">
             <div class="card-head">
-              <h2 id="board-title">Leaderboard</h2>
-              <span class="pill warn">Placeholder</span>
+              <h2 id="board-title" data-i18n="boardTitle">Leaderboard</h2>
+              <span class="pill warn" data-i18n="placeholder">Placeholder</span>
             </div>
             <div class="board-tools">
-              <div class="seg" role="tablist" aria-label="Leaderboard metric">
-                <button type="button" role="tab" id="tab-invites" aria-selected="true" aria-controls="board-panel" data-board="Invites">Invites</button>
-                <button type="button" role="tab" id="tab-mints" aria-selected="false" aria-controls="board-panel" data-board="Mints">Mints</button>
-                <button type="button" role="tab" id="tab-holders" aria-selected="false" aria-controls="board-panel" data-board="Holders">Holders</button>
+              <div class="seg" role="tablist" aria-label="Leaderboard metric" data-i18n-aria="ariaBoard">
+                <button type="button" role="tab" id="tab-invites" aria-selected="true" aria-controls="board-panel" data-board="invites" data-i18n="boardInvites">Invites</button>
+                <button type="button" role="tab" id="tab-mints" aria-selected="false" aria-controls="board-panel" data-board="mints" data-i18n="boardMints">Mints</button>
+                <button type="button" role="tab" id="tab-holders" aria-selected="false" aria-controls="board-panel" data-board="holders" data-i18n="boardHolders">Holders</button>
               </div>
-              <div class="seg" role="group" aria-label="Window">
-                <button type="button" aria-pressed="true" data-window="Day">Day</button>
-                <button type="button" aria-pressed="false" data-window="Week">Week</button>
+              <div class="seg" role="group" aria-label="Window" data-i18n-aria="ariaWindow">
+                <button type="button" aria-pressed="true" data-window="day" data-i18n="boardDay">Day</button>
+                <button type="button" aria-pressed="false" data-window="week" data-i18n="boardWeek">Week</button>
               </div>
             </div>
-            <p class="board-cols"><span>Rank</span><span>Agent ID</span><span id="board-metric">Invites</span></p>
+            <p class="board-cols"><span data-i18n="boardRank">Rank</span><span data-i18n="boardAgent">Agent ID</span><span id="board-metric">Invites</span></p>
             <div id="board-panel" role="tabpanel" aria-labelledby="tab-invites">
               <p class="empty" id="board-empty">No mainnet sale yet. Invites will list here after a kind-3 pad is live on chain 56. Window: Day.</p>
             </div>
@@ -163,51 +168,51 @@
 
     <section class="section wrap" id="how" aria-labelledby="how-title">
       <div class="section-head">
-        <p class="eyebrow">How to mint</p>
-        <h2 id="how-title">Six steps, one BNB quote</h2>
-        <p>The sale is a kind-3 flywheel on GangFlywheelPad. Parameters are fixed at create. The pad cannot pause the sale, change those parameters, or take the BNB it holds.</p>
+        <p class="eyebrow" data-i18n="howEyebrow">How to mint</p>
+        <h2 id="how-title" data-i18n="howTitle">Six steps, one BNB quote</h2>
+        <p data-i18n="howLede">The sale is a kind-3 flywheel on GangFlywheelPad. Parameters are fixed at create. The pad cannot pause the sale, change those parameters, or take the BNB it holds.</p>
       </div>
       <ol class="steps">
         <li>
           <span class="num">1</span>
           <div>
-            <h3>Hold a .ai Agent ID</h3>
-            <p>Minting checks the Agent ID gate. Testnet uses 0x24D0…5B2a. A mainnet sale will use 0x60B9…022F. Full addresses are in the Agent ID section below. A wallet without an Agent ID cannot mint.</p>
+            <h3 data-i18n="s1h">Hold a .ai Agent ID</h3>
+            <p data-i18n="s1p">Minting checks the Agent ID gate. Testnet uses 0x24D0…5B2a. A mainnet sale will use 0x60B9…022F. Full addresses are in the Agent ID section below. A wallet without an Agent ID cannot mint.</p>
           </div>
         </li>
         <li>
           <span class="num">2</span>
           <div>
-            <h3>Pay BNB, not a token transfer</h3>
-            <p>The quote asset is WBNB. Before the pool opens, a share is 0.002 BNB. Add 1% for the platform fee bucket. Wrapping and the mint call happen together. A plain BNB transfer to the pad, or to any token address, does not mint.</p>
+            <h3 data-i18n="s2h">Pay BNB, not a token transfer</h3>
+            <p data-i18n="s2p">The quote asset is WBNB. Before the pool opens, a share is 0.002 BNB. Add 1% for the platform fee bucket. Wrapping and the mint call happen together. A plain BNB transfer to the pad, or to any token address, does not mint.</p>
           </div>
         </li>
         <li>
           <span class="num">3</span>
           <div>
-            <h3>Stay inside the Agent ID quota</h3>
-            <p>Each Agent ID starts with 10 shares, and that quota covers both the pre-open sale and the minting after open. One transaction can take 1 to 10 shares. An invite adds one share to the referrer when the invited wallet mints for the first time, and only if the referrer has already minted and holds an Agent ID. Inviting yourself does not count. There is no social-task claim.</p>
+            <h3 data-i18n="s3h">Stay inside the Agent ID quota</h3>
+            <p data-i18n="s3p">Each Agent ID starts with 10 shares, and that quota covers both the pre-open sale and the minting after open. One transaction can take 1 to 10 shares. An invite adds one share to the referrer when the invited wallet mints for the first time, and only if the referrer has already minted and holds an Agent ID. Inviting yourself does not count. There is no social-task claim.</p>
           </div>
         </li>
         <li>
           <span class="num">4</span>
           <div>
-            <h3>Before the pool opens</h3>
-            <p>The wallet receives 100,000 HALO per share. The pool is reserved the same number. Tokens cannot be transferred yet. Selling back pays the mint price minus a 1% exit fee. After seven days without progress that exit fee is 0. The 1% platform fee is not returned.</p>
+            <h3 data-i18n="s4h">Before the pool opens</h3>
+            <p data-i18n="s4p">The wallet receives 100,000 HALO per share. The pool is reserved the same number. Tokens cannot be transferred yet. Selling back pays the mint price minus a 1% exit fee. After seven days without progress that exit fee is 0. The 1% platform fee is not returned.</p>
           </div>
         </li>
         <li>
           <span class="num">5</span>
           <div>
-            <h3>Share 10,000 opens the pair</h3>
-            <p>The mint that sells share 10,000 launches in that same transaction. With a zero creator cut of the principal, the pair is seeded with 20 BNB and 1,000,000,000 tokens. LP is minted to the dead address. The creator can open earlier once 3,000 shares are sold. Early open seeds only what has actually been raised: at 3,000 shares that is 6 BNB and 300,000,000 tokens.</p>
+            <h3 data-i18n="s5h">Share 10,000 opens the pair</h3>
+            <p data-i18n="s5p">The mint that sells share 10,000 launches in that same transaction. With a zero creator cut of the principal, the pair is seeded with 20 BNB and 1,000,000,000 tokens. LP is minted to the dead address. The creator can open earlier once 3,000 shares are sold. Early open seeds only what has actually been raised: at 3,000 shares that is 6 BNB and 300,000,000 tokens.</p>
           </div>
         </li>
         <li>
           <span class="num">6</span>
           <div>
-            <h3>Keep minting after the open</h3>
-            <p>Post-open minting is on. The whole batch uses the last share’s tier. Token amounts then follow the pool, and new liquidity is locked to the dead address. The rules are in the next sections.</p>
+            <h3 data-i18n="s6h">Keep minting after the open</h3>
+            <p data-i18n="s6p">Post-open minting is on. The whole batch uses the last share’s tier. Token amounts then follow the pool, and new liquidity is locked to the dead address. The rules are in the next sections.</p>
           </div>
         </li>
       </ol>
@@ -215,35 +220,35 @@
 
     <section class="section wrap" id="agent" aria-labelledby="agent-title">
       <div class="section-head">
-        <p class="eyebrow">Agent ID</p>
-        <h2 id="agent-title">One identity, ten shares, invites on top</h2>
-        <p>The quota is per Agent ID, shared across the life of the sale. It is not a social-task score and it is not reset when the pool opens.</p>
+        <p class="eyebrow" data-i18n="agentEyebrow">Agent ID</p>
+        <h2 id="agent-title" data-i18n="agentTitle">One identity, ten shares, invites on top</h2>
+        <p data-i18n="agentLede">The quota is per Agent ID, shared across the life of the sale. It is not a social-task score and it is not reset when the pool opens.</p>
       </div>
       <div class="two">
         <article class="card panel">
-          <h3>Quota</h3>
+          <h3 data-i18n="quota">Quota</h3>
           <table class="kv">
             <tbody>
-              <tr><th scope="row">Base per Agent ID</th><td>10 shares</td></tr>
-              <tr><th scope="row">Invite bonus</th><td>+1 to the referrer</td></tr>
-              <tr><th scope="row">Who can be referred</th><td>A wallet whose first paid mint names a referrer that already minted</td></tr>
-              <tr><th scope="row">Self-invite</th><td>Does not count</td></tr>
-              <tr><th scope="row">Social tasks</th><td>None</td></tr>
-              <tr><th scope="row">Per transaction</th><td>1–10 shares</td></tr>
-              <tr><th scope="row">Pre-open and post-open</th><td>Same quota</td></tr>
+              <tr><th scope="row" data-i18n="qBase">Base per Agent ID</th><td data-i18n="qBaseVal">10 shares</td></tr>
+              <tr><th scope="row" data-i18n="qInvite">Invite bonus</th><td data-i18n="qInviteVal">+1 to the referrer</td></tr>
+              <tr><th scope="row" data-i18n="qWho">Who can be referred</th><td data-i18n="qWhoVal">A wallet whose first paid mint names a referrer that already minted</td></tr>
+              <tr><th scope="row" data-i18n="qSelf">Self-invite</th><td data-i18n="qSelfVal">Does not count</td></tr>
+              <tr><th scope="row" data-i18n="qSocial">Social tasks</th><td data-i18n="qSocialVal">None</td></tr>
+              <tr><th scope="row" data-i18n="qTx">Per transaction</th><td data-i18n="qTxVal">1–10 shares</td></tr>
+              <tr><th scope="row" data-i18n="qBoth">Pre-open and post-open</th><td data-i18n="qBothVal">Same quota</td></tr>
             </tbody>
           </table>
         </article>
         <article class="card panel">
-          <h3>Gates</h3>
-          <p>Create and mint both require an Agent ID. Sell-back and dividend claims do not. The testnet pad snapshots the testnet gate. A mainnet create, once the pad is listed, snapshots the mainnet gate.</p>
+          <h3 data-i18n="gates">Gates</h3>
+          <p data-i18n="gatesBody">Create and mint both require an Agent ID. Sell-back and dividend claims do not. The testnet pad snapshots the testnet gate. A mainnet create, once the pad is listed, snapshots the mainnet gate.</p>
           <div class="address-list">
             <div>
-              <span>Testnet gate · 97</span>
+              <span data-i18n="testnetGate">Testnet gate · 97</span>
               <code class="mono-break">0x24D0A2106AC3Ebf7d770d19f4aF0a5149ebe5B2a</code>
             </div>
             <div>
-              <span>Mainnet gate · 56</span>
+              <span data-i18n="mainnetGate">Mainnet gate · 56</span>
               <code class="mono-break">0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F</code>
             </div>
           </div>
@@ -253,61 +258,61 @@
 
     <section class="section wrap" id="after" aria-labelledby="after-title">
       <div class="section-head">
-        <p class="eyebrow">Post-open mint</p>
-        <h2 id="after-title">The pool opens. The mint does not stop.</h2>
-        <p>Kind 3 is built so the sale that fills share 10,000 is the same sale people keep minting. Net BNB from those later mints is added to the official pair, and the new LP goes to the dead address.</p>
+        <p class="eyebrow" data-i18n="afterEyebrow">Post-open mint</p>
+        <h2 id="after-title" data-i18n="afterTitle">The pool opens. The mint does not stop.</h2>
+        <p data-i18n="afterLede">Kind 3 is built so the sale that fills share 10,000 is the same sale people keep minting. Net BNB from those later mints is added to the official pair, and the new LP goes to the dead address.</p>
       </div>
       <div class="after-grid">
         <article class="fact">
-          <h3>One price for the batch</h3>
-          <p>If a mint crosses a tier, every share in that transaction is charged at the last share’s tier. The price is not the sum of each share.</p>
+          <h3 data-i18n="f1h">One price for the batch</h3>
+          <p data-i18n="f1p">If a mint crosses a tier, every share in that transaction is charged at the last share’s tier. The price is not the sum of each share.</p>
         </article>
         <article class="fact">
-          <h3>Tokens follow the pool</h3>
-          <p>After the open, the token amount is set from the pool price, using the spot price, the block-start price, the recent high, and the 30-minute TWAP as floors. This page does not invent that number.</p>
+          <h3 data-i18n="f2h">Tokens follow the pool</h3>
+          <p data-i18n="f2p">After the open, the token amount is set from the pool price, using the spot price, the block-start price, the recent high, and the 30-minute TWAP as floors. This page does not invent that number.</p>
         </article>
         <article class="fact">
-          <h3>The price levels off</h3>
-          <p>There are 353 tiers. Share 4,440,000 is 8.07× the opening price, 0.01614 BNB. Every later share stays at 0.01614 BNB. Minting does not end there. Supply is capped at 1,000,000,000,000 tokens.</p>
+          <h3 data-i18n="f3h">The price levels off</h3>
+          <p data-i18n="f3p">There are 353 tiers. Share 4,440,000 is 8.07× the opening price, 0.01614 BNB. Every later share stays at 0.01614 BNB. Minting does not end there. Supply is capped at 1,000,000,000,000 tokens.</p>
         </article>
         <article class="fact">
           <h3>SharedDividendVault</h3>
-          <p>Minting records a holder baseline in the vault. A sell-back writes it again. Claims are on the vault. Eligibility uses kind 3’s 60% hold line. Buy tax and sell tax are each 1%. Half of that 1% is recorded for holders, a quarter goes to the platform fee bucket, and a quarter to the creator.</p>
+          <p data-i18n="f4p">Minting records a holder baseline in the vault. A sell-back writes it again. Claims are on the vault. Eligibility uses kind 3’s 60% hold line. Buy tax and sell tax are each 1%. Half of that 1% is recorded for holders, a quarter goes to the platform fee bucket, and a quarter to the creator.</p>
         </article>
         <article class="fact">
-          <h3>When a mint is refused</h3>
-          <p>A post-open mint is refused while the pool is more than 10% under its average or its recent high, or when this wallet’s last 30 minutes would move more than 2% of the pool’s quote.</p>
+          <h3 data-i18n="f5h">When a mint is refused</h3>
+          <p data-i18n="f5p">A post-open mint is refused while the pool is more than 10% under its average or its recent high, or when this wallet’s last 30 minutes would move more than 2% of the pool’s quote.</p>
         </article>
         <article class="fact">
-          <h3>What the sale cannot do</h3>
-          <p>The creator’s cut of the principal is zero. Only the creator can open early, and only from 3,000 shares. The sale has no pause and no per-sale renounce. Open-early does not expire. The 1% mint fee is separate from tax and goes to the platform fee bucket.</p>
+          <h3 data-i18n="f6h">What the sale cannot do</h3>
+          <p data-i18n="f6p">The creator’s cut of the principal is zero. Only the creator can open early, and only from 3,000 shares. The sale has no pause and no per-sale renounce. Open-early does not expire. The 1% mint fee is separate from tax and goes to the platform fee bucket.</p>
         </article>
       </div>
     </section>
 
     <section class="section wrap" id="tiers" aria-labelledby="tiers-title">
       <div class="section-head">
-        <p class="eyebrow">Tiers</p>
-        <h2 id="tiers-title">353 steps, quoted in BNB</h2>
-        <p>Opening price is 0.002 BNB through share 10,000. Later tiers use the kind-3 standard table: the same widths, multiplied into that BNB base. The full list is below. Highlight follows the preview serial in the mint card.</p>
+        <p class="eyebrow" data-i18n="tiersEyebrow">Tiers</p>
+        <h2 id="tiers-title" data-i18n="tiersTitle">353 steps, quoted in BNB</h2>
+        <p data-i18n="tiersLede">Opening price is 0.002 BNB through share 10,000. Later tiers use the kind-3 standard table: the same widths, multiplied into that BNB base. The full list is below. Highlight follows the preview serial in the mint card.</p>
       </div>
       <div class="card panel band-wrap">
         <table class="bands">
           <thead>
-            <tr><th scope="col">Shares</th><th scope="col">Multiple</th><th scope="col">BNB / share</th></tr>
+            <tr><th scope="col" data-i18n="colShares">Shares</th><th scope="col" data-i18n="colMultiple">Multiple</th><th scope="col" data-i18n="colBnb">BNB / share</th></tr>
           </thead>
           <tbody>
             <tr><td>1 – 10,000</td><td>×1.00</td><td>0.002</td></tr>
-            <tr><td>10,001 – 20,000</td><td>×1.10 to ×2.00, +0.10 each 1,000 shares</td><td>0.0022 – 0.004</td></tr>
-            <tr><td>20,001 – 100,000</td><td>×2.10 to ×3.68, +0.02 each 1,000 shares</td><td>0.0042 – 0.00736</td></tr>
-            <tr><td>100,001 – 1,000,000</td><td>×3.70 to ×5.48, +0.02 each 10,000 shares</td><td>0.0074 – 0.01096</td></tr>
-            <tr><td>1,000,001 – 4,420,000</td><td>×5.50 stepping to ×8.05</td><td>0.011 – 0.01610</td></tr>
-            <tr><td>4,420,001 onward</td><td>×8.07, and it stays there</td><td>0.01614</td></tr>
+            <tr><td>10,001 – 20,000</td><td data-i18n="band2">×1.10 to ×2.00, +0.10 each 1,000 shares</td><td>0.0022 – 0.004</td></tr>
+            <tr><td>20,001 – 100,000</td><td data-i18n="band3">×2.10 to ×3.68, +0.02 each 1,000 shares</td><td>0.0042 – 0.00736</td></tr>
+            <tr><td>100,001 – 1,000,000</td><td data-i18n="band4">×3.70 to ×5.48, +0.02 each 10,000 shares</td><td>0.0074 – 0.01096</td></tr>
+            <tr><td>1,000,001 – 4,420,000</td><td data-i18n="band5">×5.50 stepping to ×8.05</td><td>0.011 – 0.01610</td></tr>
+            <tr><td data-i18n="band6s">4,420,001 onward</td><td data-i18n="band6m">×8.07, and it stays there</td><td>0.01614</td></tr>
           </tbody>
         </table>
       </div>
       <div class="tier-tools">
-        <label>Find the tier for share
+        <label><span data-i18n="findLabel">Find the tier for share</span>
           <input id="tier-find" type="number" min="1" step="1" value="1" inputmode="numeric">
         </label>
         <p class="hint" id="tier-count">Building the 353 tiers…</p>
@@ -316,16 +321,16 @@
         <table class="tiers">
           <thead>
             <tr>
-              <th scope="col">Tier</th>
-              <th scope="col">Shares</th>
-              <th scope="col">Multiple</th>
+              <th scope="col" data-i18n="thTier">Tier</th>
+              <th scope="col" data-i18n="thShares">Shares</th>
+              <th scope="col" data-i18n="thMultiple">Multiple</th>
               <th scope="col">BNB</th>
             </tr>
           </thead>
           <tbody id="tier-body"></tbody>
         </table>
       </div>
-      <p class="note">A mint that crosses a line is charged entirely at the last share’s price. Share 4,440,000 is inside the ×8.07 tier. Later shares stay at 0.01614 BNB.</p>
+      <p class="note" data-i18n="tierNote">A mint that crosses a line is charged entirely at the last share’s price. Share 4,440,000 is inside the ×8.07 tier. Later shares stay at 0.01614 BNB.</p>
       <noscript>
         <p class="note">The 353-row table needs the site script. The band table above is the same schedule.</p>
       </noscript>
@@ -333,44 +338,44 @@
 
     <section class="section wrap" id="stats" aria-labelledby="stats-title">
       <div class="section-head">
-        <p class="eyebrow">Stats</p>
-        <h2 id="stats-title">Live figures wait for mainnet</h2>
-        <p>These are placeholders. Chain 56 has the dividend vault, the fee bucket, and the migrator, and it does not have a kind-3 pad. Nothing here is a reading from a live sale.</p>
+        <p class="eyebrow" data-i18n="statsEyebrow">Stats</p>
+        <h2 id="stats-title" data-i18n="statsTitle">Live figures wait for mainnet</h2>
+        <p data-i18n="statsLede">These are placeholders. Chain 56 has the dividend vault, the fee bucket, and the migrator, and it does not have a kind-3 pad. Nothing here is a reading from a live sale.</p>
       </div>
       <div class="stats-grid">
-        <article class="stat"><em>Placeholder</em><span class="label">Shares minted</span><strong>—</strong><p>No mainnet serial yet.</p></article>
-        <article class="stat"><em>Placeholder</em><span class="label">BNB paid in</span><strong>—</strong><p>No mainnet proceeds yet.</p></article>
-        <article class="stat"><em>Placeholder</em><span class="label">Live share price</span><strong>—</strong><p>Schedule for share 1 is 0.002 BNB.</p></article>
-        <article class="stat"><em>Placeholder</em><span class="label">Next share</span><strong>—</strong><p>Fills in when a sale exists.</p></article>
-        <article class="stat"><em>Placeholder</em><span class="label">Holders</span><strong>—</strong><p>No holder count yet.</p></article>
-        <article class="stat"><em>Placeholder</em><span class="label">Official pool</span><strong>—</strong><p>No mainnet pair yet.</p></article>
-        <article class="stat"><em>Placeholder</em><span class="label">Dividend pending</span><strong>—</strong><p>SharedDividendVault claim, once a sale pays it.</p></article>
-        <article class="stat"><em>Placeholder</em><span class="label">LP at dead address</span><strong>—</strong><p>New LP is minted to the dead address after open.</p></article>
+        <article class="stat"><em data-i18n="placeholder">Placeholder</em><span class="label" data-i18n="st1l">Shares minted</span><strong>—</strong><p data-i18n="st1p">No mainnet serial yet.</p></article>
+        <article class="stat"><em data-i18n="placeholder">Placeholder</em><span class="label" data-i18n="st2l">BNB paid in</span><strong>—</strong><p data-i18n="st2p">No mainnet proceeds yet.</p></article>
+        <article class="stat"><em data-i18n="placeholder">Placeholder</em><span class="label" data-i18n="st3l">Live share price</span><strong>—</strong><p data-i18n="st3p">Schedule for share 1 is 0.002 BNB.</p></article>
+        <article class="stat"><em data-i18n="placeholder">Placeholder</em><span class="label" data-i18n="st4l">Next share</span><strong>—</strong><p data-i18n="st4p">Fills in when a sale exists.</p></article>
+        <article class="stat"><em data-i18n="placeholder">Placeholder</em><span class="label" data-i18n="st5l">Holders</span><strong>—</strong><p data-i18n="st5p">No holder count yet.</p></article>
+        <article class="stat"><em data-i18n="placeholder">Placeholder</em><span class="label" data-i18n="st6l">Official pool</span><strong>—</strong><p data-i18n="st6p">No mainnet pair yet.</p></article>
+        <article class="stat"><em data-i18n="placeholder">Placeholder</em><span class="label" data-i18n="st7l">Dividend pending</span><strong>—</strong><p data-i18n="st7p">SharedDividendVault claim, once a sale pays it.</p></article>
+        <article class="stat"><em data-i18n="placeholder">Placeholder</em><span class="label" data-i18n="st8l">LP at dead address</span><strong>—</strong><p data-i18n="st8p">New LP is minted to the dead address after open.</p></article>
       </div>
 
       <div class="contract-grid">
         <article class="card panel">
-          <h3>Testnet · chain 97 · pad listed</h3>
-          <p>This is the second kind-3 set. Use it for the pad. Do not send a plain BNB transfer and expect a mint.</p>
+          <h3 data-i18n="testnetHead">Testnet · chain 97 · pad listed</h3>
+          <p data-i18n="testnetBody">This is the second kind-3 set. Use it for the pad. Do not send a plain BNB transfer and expect a mint.</p>
           <div class="address-list">
-            <div><span>Kind-3 pad</span><code class="mono-break">0xD6482850aCAC74BA889804931Fc797294777951c</code></div>
+            <div><span data-i18n="labPad">Kind-3 pad</span><code class="mono-break">0xD6482850aCAC74BA889804931Fc797294777951c</code></div>
             <div><span>SharedDividendVault</span><code class="mono-break">0xF6925641e547a7dD40f971e61c7Cd51624231d69</code></div>
-            <div><span>Tax handler</span><code class="mono-break">0xCE084a4aF0059eB1620769a4daB7A9372A9cd315</code></div>
-            <div><span>Platform fee bucket</span><code class="mono-break">0x5338c0bF41F72359e55d02b884Ade94e1405c1aF</code></div>
-            <div><span>Migrator</span><code class="mono-break">0xaE31a41ef53482f71a55b5d38b65255be12a2e20</code></div>
-            <div><span>Registry</span><code class="mono-break">0xB11B83C83DEd269B040faecC1D61B4885BA8e56e</code></div>
+            <div><span data-i18n="labTax">Tax handler</span><code class="mono-break">0xCE084a4aF0059eB1620769a4daB7A9372A9cd315</code></div>
+            <div><span data-i18n="labFee">Platform fee bucket</span><code class="mono-break">0x5338c0bF41F72359e55d02b884Ade94e1405c1aF</code></div>
+            <div><span data-i18n="labMig">Migrator</span><code class="mono-break">0xaE31a41ef53482f71a55b5d38b65255be12a2e20</code></div>
+            <div><span data-i18n="labReg">Registry</span><code class="mono-break">0xB11B83C83DEd269B040faecC1D61B4885BA8e56e</code></div>
           </div>
         </article>
         <article class="card panel">
-          <h3>Mainnet · chain 56 · not live</h3>
-          <p>The registry has no kind-3 pad, so a HALO sale cannot be created here yet. The vault below is the mainnet SharedDividendVault. It is not paying this sale.</p>
+          <h3 data-i18n="mainnetHead">Mainnet · chain 56 · not live</h3>
+          <p data-i18n="mainnetBody">The registry has no kind-3 pad, so a HALO sale cannot be created here yet. The vault below is the mainnet SharedDividendVault. It is not paying this sale.</p>
           <div class="address-list">
-            <div><span>Kind-3 pad</span><strong>Not live</strong></div>
+            <div><span data-i18n="labPad">Kind-3 pad</span><strong data-i18n="notLive">Not live</strong></div>
             <div><span>SharedDividendVault</span><code class="mono-break">0x1BDBDD73f51079c64BCA3917629c84c257921aCc</code></div>
-            <div><span>Platform fee bucket</span><code class="mono-break">0xB8C4B68a62513240A5e44EFd78fFc35ac25bA21b</code></div>
-            <div><span>Migrator</span><code class="mono-break">0xfE38fFce7f918cffC26575D125ed6D09864c3604</code></div>
-            <div><span>Registry</span><code class="mono-break">0x4fF77D4d9ac080939a24E1B805206bA094C44e5C</code></div>
-            <div><span>HALO token</span><strong>Not published</strong></div>
+            <div><span data-i18n="labFee">Platform fee bucket</span><code class="mono-break">0xB8C4B68a62513240A5e44EFd78fFc35ac25bA21b</code></div>
+            <div><span data-i18n="labMig">Migrator</span><code class="mono-break">0xfE38fFce7f918cffC26575D125ed6D09864c3604</code></div>
+            <div><span data-i18n="labReg">Registry</span><code class="mono-break">0x4fF77D4d9ac080939a24E1B805206bA094C44e5C</code></div>
+            <div><span data-i18n="labHalo">HALO token</span><strong data-i18n="notPublished">Not published</strong></div>
           </div>
         </article>
       </div>
@@ -380,12 +385,12 @@
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-row">
-        <span>HALO · 每一份，都给池子加一圈。</span>
-        <span>Quote: BNB</span>
-        <span>Pad on testnet only</span>
+        <span data-i18n="footerLine">HALO · Every share adds a ring to the pool.</span>
+        <span data-i18n="footerQuote">Quote: BNB</span>
+        <span data-i18n="footerPad">Pad on testnet only</span>
       </div>
-      <p>On mainnet the platform fee bucket uses 80% to buy back and burn GANG and sends 20% to the Safe. That bucket is deployed. The kind-3 pad is not listed on it yet, so this sale is not taking fees there.</p>
-      <p>HALO is a share-mint token with no promised utility or value. The price can go to zero. The tier table is a schedule, not a price floor you can count on if nobody mints. Nothing on this page is an offer to sell a token or investment advice.</p>
+      <p data-i18n="foot1">On mainnet the platform fee bucket uses 80% to buy back and burn GANG and sends 20% to the Safe. That bucket is deployed. The kind-3 pad is not listed on it yet, so this sale is not taking fees there.</p>
+      <p data-i18n="foot2">HALO is a share-mint token with no promised utility or value. The price can go to zero. The tier table is a schedule, not a price floor you can count on if nobody mints. Nothing on this page is an offer to sell a token or investment advice.</p>
     </div>
   </footer>
   <script src="site.js"></script>
